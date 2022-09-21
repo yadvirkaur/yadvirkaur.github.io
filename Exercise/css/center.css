@@ -31,7 +31,7 @@ h1 {
 
 @media screen and (max-width: 350px) {
   .container {
-    background: url(/images/galaxy250.jpg);
+    background: url(../images/galaxy250.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -44,7 +44,7 @@ h1 {
 }
 @media screen and (min-width: 350px) and (max-width: 596px) {
   .container {
-    background: url(/images/galaxy596.jpg);
+    background: url(../images/galaxy596.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -57,7 +57,7 @@ h1 {
 }
 @media screen and (min-width: 596px) and (max-width: 816px) {
   .container {
-    background: url(/images/galaxy816.jpg);
+    background: url(../images/galaxy816.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -71,7 +71,7 @@ h1 {
 
 @media screen and (min-width: 816px) {
   .container {
-    background: url(/images/galaxy1000.jpg);
+    background: url(../images/galaxy1000.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
