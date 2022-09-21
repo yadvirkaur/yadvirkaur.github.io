@@ -1,0 +1,111 @@
+html {
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 900px;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 1rem 5rem;
+}
+.box {
+  padding: 0 0.5rem;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+h1 {
+  font-weight: 3.052rem;
+}
+h2 {
+  font-weight: 2.441rem;
+}
+h3 {
+  font-weight: 1.953rem;
+  margin: 2rem 0 1rem;
+}
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  letter-spacing: -0.3px;
+}
+p {
+  font-style: italic;
+  font-family: "Merriweather", serif;
+  font-size: 1.2rem;
+}
+/*html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #222;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 5.61rem;
+}
+
+h2 {
+  font-size: 4.209rem;
+}
+
+h3 {
+  font-size: 3.157rem;
+}
+
+h4 {
+  font-size: 2.369rem;
+}
+
+h5 {
+  font-size: 1.777rem;
+}
+
+h6 {
+  font-size: 1.333rem;
+}
+
+img {
+  width: 100%;
+}
+
+ol li {
+  margin-bottom: 2rem;
+}
+
+.lead {
+  font-family: "PT Serif", "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+*/

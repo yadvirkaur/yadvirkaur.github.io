@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/normalize.css.css" />
+    <link rel="stylesheet" href="forms.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <div class="centerpage">
+      <form action="https://formspree.io/f/mknegdog" method="POST">
+        <fieldset class="item">
+          <legend class="head">Please sign in</legend>
+
+          <input
+            name="email"
+            type="email"
+            placeholder="Email address"
+            maxlength="50"
+            class="textfield"
+            autofocus
+            required
+          />
+          <input
+            type="password"
+            name="secret"
+            class="textfield"
+            maxlength="30"
+            placeholder="Password"
+            required
+          />
+
+          <div>
+            <input type="checkbox" name="tick me" id="tick" />
+            <label class="remember label-inline" for="tick">Remember me</label>
+          </div>
+
+          <button class="submitbutton" type="submit">Sign in</button>
+          <legend>Copyright &copy 2020</legend>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

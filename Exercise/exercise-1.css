@@ -1,0 +1,26 @@
+table,
+th,
+td {
+  border-top: 1px solid #c4dcf3;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+.tab tr:nth-child(odd) {
+  background-color: #eef7ff;
+}
+
+.tab th {
+  text-align: left;
+  background-color: #427fef;
+  color: white;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+
+  border-radius: 10px;
+  box-shadow: 10px 10px lightgrey;
+}

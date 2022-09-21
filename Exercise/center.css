@@ -1,0 +1,96 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Poppins;
+}
+h1 {
+  color: white;
+
+  font-weight: 900;
+  text-shadow: 1px 1px 0px rgb(0, 0, 0);
+  word-spacing: 0.5rem;
+  padding: 1rem;
+}
+.tagline {
+  color: aliceblue;
+
+  font-weight: 300;
+  background: rgb(0, 0, 0, 0.6);
+  padding: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    background: url(/images/galaxy250.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 596px) {
+  .container {
+    background: url(/images/galaxy596.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .tagline {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 596px) and (max-width: 816px) {
+  .container {
+    background: url(/images/galaxy816.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  .tagline {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 816px) {
+  .container {
+    background: url(/images/galaxy1000.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  .tagline {
+    font-size: 3rem;
+  }
+}
+/* css from responsivebreakpoints
+<img
+sizes="(max-width: 1000px) 100vw, 1000px"
+srcset="
+galaxy250.jpg 250w,
+galaxy596.jpg 596w,
+galaxy816.jpg 816w,
+galaxy1000.jpg 1000w"
+src="galaxy.jpg"
+alt="">
+
+*/
