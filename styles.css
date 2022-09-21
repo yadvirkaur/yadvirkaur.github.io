@@ -26,7 +26,7 @@ h3 {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 7rem;
 }
 h2 {
   font-size: 4rem;
@@ -44,7 +44,7 @@ p {
     font-size: 1.8rem;
   }
   h1 {
-    font-size: 7rem;
+    font-size: 8rem;
   }
   h2 {
     font-size: 4rem;
@@ -58,13 +58,14 @@ p {
 }
 
 /*-------------Hero-Block-------------------------------------*/
+
 .hero__image {
   width: 100%;
 }
 .hero__text {
   font-weight: 700;
   letter-spacing: 1px;
-  margin-top: ;
+
   text-align: center;
 }
 .hero__tagline {
@@ -78,8 +79,11 @@ p {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero__text {
-    margin-top: 4rem;
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .hero__text,
   .hero__tagline {
@@ -94,7 +98,7 @@ p {
   font-size: 4rem;
   display: block;
   text-align: center;
-  padding: 1rem 0 5rem;
+  padding: 8rem 0 5rem;
 }
 
 @keyframes pop {
