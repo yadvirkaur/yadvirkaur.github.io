@@ -31,8 +31,6 @@ body {
 /*---Photo-gallery---------------------------------------------*/
 .container {
   display: grid;
-
-  justify-items: stretch;
   align-items: stretch;
 }
 .photoimg {

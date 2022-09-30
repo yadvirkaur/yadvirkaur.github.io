@@ -12,28 +12,32 @@
     <meta property="og:title" content="Portfolio-Yadvir Kaur" />
     <meta property="og:description" content="Web design that feels right" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://github.com/yadvirkaur/yadvirkaur.github.io/blob/main/images/logo.jpg"
-    />
     <meta property="og:url" content="https://yadvirkaur.github.io/" />
+
+    <style>
+      body {
+        color: var(--color-body);
+        font-family: Inter, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        line-height: 1.2;
+        background-color: #330033;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        height: 300vh;
+      }
+    </style>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script
-      src="https://kit.fontawesome.com/f20bb40ef8.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <div class="block container">
-      <div class="grid hero">
+    <section class="block container hero">
+      <div class="grid">
         <header class="hero__content">
           <h1 data-aos="fade-right" class="hero__text">
             Mini Projects using HTML&CSS
@@ -49,12 +53,13 @@
           />
         </div>
       </div>
-      <span class="animation-pop icon">
-        <i class="fa-solid fa-angle-down"></i
-      ></span>
-    </div>
 
-    <section class="block">
+      <div>
+        <img class="animation-pop icons" src="images/chevron.svg" alt="" />
+      </div>
+    </section>
+
+    <section class="block projects_container">
       <header class="block__header">
         <h2>Web design that feels right</h2>
       </header>
@@ -68,7 +73,29 @@
           <a href="Moshify/index.html" class="link-arrow">LEARN MORE --></a>
         </div>
 
-        <img class="project__image" src="images/Moshify.jpg" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/Moshify_570.webp"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/webp"
+            srcset="images/Moshify_832.webp"
+            media="(min-width: 580px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/Moshify_570.jpg"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/Moshify_832.jpg"
+            media="(min-width: 580px)"
+          />
+          <img class="project__image" src="images/Moshify_832.jpg" alt="" />
+        </picture>
       </article>
 
       <article class="grid project">
@@ -84,7 +111,29 @@
           <a href="Exercise/animate.html" class="link-arrow">LEARN MORE --></a>
         </div>
 
-        <img class="project__image" src="images/animation.jpg" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/animation_570.webp"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/webp"
+            srcset="images/animation_1022.webp"
+            media="(min-width: 580px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/animation_570.jpg"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/animation_1022.jpg"
+            media="(min-width: 580px)"
+          />
+          <img class="project__image" src="images/animation_1022.jpg" alt="" />
+        </picture>
       </article>
 
       <article class="grid project">
@@ -97,8 +146,33 @@
           </p>
           <a href="Exercise/forms.html" class="link-arrow">LEARN MORE --></a>
         </div>
-
-        <img class="project__image" src="images/formelementimage.jpg" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/formelementimage_570.webp"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/webp"
+            srcset="images/formelementimage_1026.webp"
+            media="(min-width: 580px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/formelementimage_570.jpg"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/formelementimage_1026.jpg"
+            media="(min-width: 580px)"
+          />
+          <img
+            class="project__image"
+            src="images/formelementimage_1026.jpg"
+            alt=""
+          />
+        </picture>
       </article>
 
       <article class="grid project">
@@ -112,8 +186,29 @@
           </p>
           <a href="Exercise/center.html" class="link-arrow">LEARN MORE --></a>
         </div>
-
-        <img class="project__image" src="images/heroelement.jpg" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/heroelement_570.webp"
+            media="(max-width: 580px)"
+          />
+          <source
+            type="image/webp"
+            srcset="images/heroelement_994.webp"
+            media="(min-width: 580px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/heroelement_570.jpg"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/heroelement_994.jpg"
+            media="(min-width: 580px)"
+          />
+          <img class="project__image" src="images/heroelement_994.jpg" alt="" />
+        </picture>
       </article>
 
       <article class="grid project">
@@ -125,8 +220,33 @@
           </p>
           <a href="Exercise/typo.html" class="link-arrow">LEARN MORE --></a>
         </div>
-
-        <img class="project__image" src="images/blogpostimage.jpg" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/blogpostimage_570.webp"
+            media="(max-width: 580px)"
+          />
+          <source
+            type="image/webp"
+            srcset="images/blogpostimage_1022.webp"
+            media="(min-width: 580px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/blogpostimage_570.jpg"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/blogpostimage_1022.jpg"
+            media="(min-width: 580px)"
+          />
+          <img
+            class="project__image"
+            src="images/blogpostimage_1022.jpg"
+            alt=""
+          />
+        </picture>
       </article>
 
       <article class="grid project">
@@ -140,8 +260,33 @@
             >LEARN MORE --></a
           >
         </div>
-
-        <img class="project__image" src="images/imagegallery.jpg" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/imagegallery_570.webp"
+            media="(max-width: 580px)"
+          />
+          <source
+            type="image/webp"
+            srcset="images/imagegallery_1029.webp"
+            media="(min-width: 580px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/imagegallery_570.jpg"
+            media="(max-width: 570px)"
+          />
+          <source
+            type="image/jpg"
+            srcset="images/imagegallery_1029.jpg"
+            media="(min-width: 580px)"
+          />
+          <img
+            class="project__image"
+            src="images/imagegallery_1029.jpg"
+            alt=""
+          />
+        </picture>
       </article>
     </section>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
