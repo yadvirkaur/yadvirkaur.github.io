@@ -21,7 +21,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   background: var(--black-color);
-  /*max-width: 1422px;*/
+
   /*max-height: 800px;*/
   border-radius: 8px;
   max-width: 100%;
@@ -67,6 +67,7 @@ body {
 .menu-icon-btn {
   padding: 0;
   background: none;
+  border: none;
 }
 
 /*---Icon---------------------------------------------*/
@@ -83,14 +84,12 @@ body {
 /*---Navbar--------------------------------------------*/
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
   position: sticky;
+  min-width: 170px;
   max-width: 240px;
   height: calc(100vh - var(--header-height));
   align-items: center;
-  padding: 24px;
+  padding: 20px;
   padding-top: 1rem;
   background: var(--black-color);
   color: var(--white-color);
@@ -125,8 +124,14 @@ ul {
   align-items: center;
   padding: 1rem;
   gap: 20px;
-  max-width: 200px;
+
   max-height: 40px;
+}
+
+.menu-icon-btn,
+.movie_card,
+.event_card {
+  cursor: pointer;
 }
 
 a {
@@ -224,26 +229,32 @@ a {
   display: none;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .navbar {
     opacity: 1;
     width: 100%;
+    display: block;
+    transition: all 0.3s;
   }
   .navbar.open {
     width: 0;
     opacity: 0;
+    display: none;
+    transition: all 0.3s;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .navbar {
     opacity: 0;
     width: 0;
+    display: none;
     transition: all 0.3s;
   }
   .navbar.open {
     opacity: 1;
     width: 100%;
+    display: block;
     transition: all 0.3s;
   }
 }
@@ -273,15 +284,20 @@ a {
 .movie {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 14px;
   margin-bottom: 60px;
+}
+.movie > * {
+  flex: 0 1 15%;
 }
 
 .movie_card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 20px;
   transition: transform 0.2s ease-out;
 }
 
@@ -326,21 +342,24 @@ a {
 
 .event {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 14px;
+}
+.event > * {
+  flex: 0 1 30%;
 }
 
 .event_card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-out;
 }
 
 .event_card:hover {
   transform: scale(1.05);
-}
-.event_card {
-  transition: transform 0.2s ease-out;
 }
 
 .event_cover > img {
@@ -401,7 +420,9 @@ a {
   line-height: 20px;
   padding: 8px 12px;
   background: #333333;
+
   color: var(--white-color);
+  color: white;
   border-radius: 8px;
   justify-content: center;
   transition: background 0.3s;
@@ -410,4 +431,10 @@ a {
 .event_button:hover {
   background: var(--white-color);
   color: var(--black-color);
+}
+
+.btncolor {
+}
+
+.bell {
 }
