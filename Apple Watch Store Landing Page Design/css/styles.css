@@ -1,0 +1,246 @@
+@import "./normalize.css";
+
+:root {
+  --powder-blue-color-gradient: linear-gradient(
+    294.28deg,
+    #c8dce6 0%,
+    #b6ccda 100%
+  );
+  --desktop-border-radius: 15px 0px 0px 15px;
+  --mobile-border-radius: 0px 0px 25px 25px;
+
+  --light-grey-color: #e5e5e5;
+  --white-color: #ffffff;
+  --powder-blue-color: #b6ccda;
+  --light-gray: #b3b3b3;
+
+  --powder-blue-watch-color: #abc6d6;
+  --powder-blue-shadow-color: #9fbed0;
+  --dark-blue-watch-color: #404354;
+  --mint-green-watch-color: #58d7c4;
+  --peach-watch-color: #f2cec6;
+
+  --dark-blue-background-color: rgba(67, 69, 88, 0.6);
+  --mint-green-background-color: rgba(106, 221, 204, 0.6);
+  --peach-background-color: rgba(249, 205, 196, 0.6);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-Tagline: 32px;
+  --fs-buybutton: 18px;
+  --fs-navbar: 18px;
+  --fs-searchbar: 14px;
+}
+
+@media (min-width: 500px) {
+  :root {
+    --fs-Tagline: 64px;
+    --fs-buybutton: 24px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  border: 1px solid white;
+
+  font-family: "Poppins", sans-serif;
+  background: var(--powder-blue-color);
+  border-radius: var(--desktop-border-radius);
+
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
+.main {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 1340px;
+  height: 100%;
+  padding: 36px;
+  margin: 0 auto;
+}
+
+@media (min-width: 750px) {
+  .main {
+    flex-direction: row;
+    padding: 64px;
+  }
+}
+
+.main_item {
+}
+
+.heading {
+  border: 1px solid yellow;
+  font-size: var(--fs-Tagline);
+  color: var(--white-color);
+  line-height: 51px;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 500px) {
+  .heading {
+    font-size: var(--fs-Tagline);
+    color: var(--white-color);
+    line-height: 86px;
+  }
+}
+
+.heading_header {
+  font-weight: var(--fw-bold);
+}
+.heading_tagline {
+  font-weight: var(--fw-regular);
+}
+.buy_button {
+  border: 3px solid #ffffff;
+  border-radius: 100px;
+  background-color: var(--powder-blue-color-gradient);
+  font-size: var(--fs-buybutton);
+  color: var(--white-color);
+  font-weight: var(--fw-medium);
+  padding: 16px 36px;
+  margin-top: 31px;
+  margin-bottom: 61px;
+}
+@media (min-width: 500px) {
+  .buy_button {
+    padding: 16px 72px;
+    margin-top: 82px;
+  }
+}
+
+.watch {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+.watch_color_preview {
+  width: 312px;
+  height: 251.3px;
+  background: url(/images/smallwatch.svg);
+}
+@media (min-width: 500px) {
+  .watch_color_preview {
+    width: 489px;
+    height: 489px;
+    background: url(/images/watch.svg);
+  }
+}
+*/
+.watch_color_indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+.dot {
+  width: 2px;
+  height: 2px;
+  background-color: var(--white-color);
+  border-radius: 100%;
+}
+.watch_color_indicator_dot {
+  margin: 1px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--white-color);
+  border-radius: 100%;
+}
+
+.watch_color_indicator_dot:hover {
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--white-color);
+}
+
+.darkblur {
+  background-color: var(--dark-blue-watch-color);
+}
+.powderblue {
+  background-color: var(--powder-blue-watch-color);
+}
+.mintgreen {
+  background-color: var(--mint-green-watch-color);
+}
+.peach {
+  background-color: var(--peach-watch-color);
+}
+
+.watch_color {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.watch_shadow {
+  width: 192px;
+  height: 50px;
+  background: var(--powder-blue-shadow-color);
+  filter: blur(20px);
+  margin-bottom: 44px;
+}
+
+@media (min-width: 500px) {
+  .watch_shadow {
+    width: 309px;
+    height: 50px;
+  }
+}
+
+.watch_selector {
+  border: 1px solid black;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 27px;
+  width: 100%;
+}
+
+.watch_darkblue,
+.watch_mintgreen,
+.watch_peach {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 131px;
+  height: 70px;
+  border-radius: 10px;
+}
+.watch_darkblue {
+  background: var(--dark-blue-background-color);
+}
+
+.watch_mintgreen {
+  background: var(--mint-green-background-color);
+}
+
+.watch_peach {
+  background: var(--peach-background-color);
+}
