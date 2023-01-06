@@ -1,0 +1,86 @@
+@import "/SpeechRecognition/normalize.css";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "helvetica neue";
+  font-weight: 200;
+  font-size: 20px;
+  background-color: rgb(247, 247, 247);
+  margin: 50px auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.words {
+  outline: none;
+  min-width: 500px;
+  min-height: 300px;
+  max-width: 70vw;
+  max-height: 75vh;
+  overflow: auto;
+  padding: 1rem 1rem 1rem 5rem;
+  /* background: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      from(#d9eaf3),
+      color-stop(4%, #fff)
+    )
+    0 4px; 
+  background-size: 100% 3rem;*/
+  position: relative;
+  line-height: 3rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin: 0 0 3rem;
+}
+
+/* .words:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #efe4e4;
+} */
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-color: #e63f3f;
+  border-radius: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -30px;
+}
+
+.microphoneON {
+  display: none;
+}
+.visibleGrey {
+  display: flex;
+  background-color: #5c5959;
+}
+.visibleRed {
+  display: flex;
+  background-color: #e63f3f;
+}
+.hide {
+  display: none;
+}
