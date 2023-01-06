@@ -42,6 +42,7 @@ body {
     grid-template-rows: repeat(4, 10rem);
     grid-template-columns: 10rem;
     gap: 2px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 900px) {
