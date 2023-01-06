@@ -1,0 +1,132 @@
+<!-- https://vclock.com/
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MyClock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="myClock.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="icons">
+        <div class="Clock icon_box">
+          <svg
+            class="icon icon-clock"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            fill="grey"
+          >
+            <path
+              d="M256 512C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256s-114.6 256-256 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+            />
+          </svg>
+          <div class="icon_name icon_name_clock">Clock</div>
+        </div>
+
+        <div class="Alarm icon_box">
+          <svg
+            class="icon icon-alarm"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            fill="grey"
+          >
+            <path
+              d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"
+            />
+          </svg>
+          <div class="icon_name icon_name_alarm">Alarm</div>
+        </div>
+
+        <div class="Timer icon_box">
+          <svg
+            class="icon icon-timer"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+            fill="grey"
+          >
+            <path
+              d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64V75c0 42.4 16.9 83.1 46.9 113.1L146.7 256 78.9 323.9C48.9 353.9 32 394.6 32 437v11c-17.7 0-32 14.3-32 32s14.3 32 32 32H64 320h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V437c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320 64 32zM96 75V64H288V75c0 25.5-10.1 49.9-28.1 67.9L192 210.7l-67.9-67.9C106.1 124.9 96 100.4 96 75z"
+            />
+          </svg>
+          <div class="icon_name icon_name_timer">Timer</div>
+        </div>
+
+        <div class="Stopwatch icon_box">
+          <svg
+            class="icon icons-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            fill="grey"
+          >
+            <path
+              d="M176 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h16V98.4C92.3 113.8 16 200 16 304c0 114.9 93.1 208 208 208s208-93.1 208-208c0-41.8-12.3-80.7-33.5-113.2l24.1-24.1c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L355.7 143c-28.1-23-62.2-38.8-99.7-44.6V64h16c17.7 0 32-14.3 32-32s-14.3-32-32-32H224 176zm72 192V320c0 13.3-10.7 24-24 24s-24-10.7-24-24V192c0-13.3 10.7-24 24-24s24 10.7 24 24z"
+            />
+          </svg>
+          <div class="icon_name icon_name_stopwatch">Stopwatch</div>
+        </div>
+      </div>
+
+      <div class="clock_block block">
+        <h1 class="clock_time_display">00:00:00</h1>
+
+        <div class="buttons">
+          <button class="Clock_btn">START</button>
+        </div>
+      </div>
+
+      <div class="alarm_block block">
+        <div class="input">
+          <select required class="time Alarm_hour"></select>
+          <select required class="time Alarm_min"></select>
+          <select required class="time Alarm_ampm"></select>
+        </div>
+
+        <div class="buttons">
+          <button class="alarm_btn">START</button>
+        </div>
+      </div>
+
+      <div class="stop_block block">
+        <h1 class="stop_time_display">00:00:00:00</h1>
+        <div class="buttons">
+          <button class="start_btn">START</button>
+          <button class="stop_btn">RESET</button>
+        </div>
+      </div>
+
+      <div class="timer_block block">
+        <div class="timer_show">
+          <h1 class="display__time-left">00:00:00</h1>
+          <div class="input">
+            <div class="select">
+              <div class="timeer">hour</div>
+              <select required class="timeer timer_hour"></select>
+            </div>
+            <div class="select">
+              <div class="timeer">min</div>
+              <select required class="timeer timer_min"></select>
+            </div>
+            <div class="select">
+              <div class="timeer">sec</div>
+              <select required class="timeer timer_sec"></select>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="timer_start_btn">START</button>
+          <button class="timer_stop_btn">RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="myClock.js"></script>
+  </body>
+</html>
