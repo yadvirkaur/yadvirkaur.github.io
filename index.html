@@ -36,7 +36,20 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <section class="block container hero">
+    <div class="menu_bar">
+      <div class="menu_bar_icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu_bar_list" id="menuList">
+        <div class="list"><a href="#home">Home</a></div>
+        <div class="list">About</div>
+        <div class="list"><a href="#projects">Projects</a></div>
+        <div class="list"><a href="#contact">Contact</a></div>
+      </div>
+    </div>
+    <section class="block container hero" id="home">
       <div class="grid">
         <header class="hero__content">
           <h1 data-aos="fade-right" class="hero__text">Front-end Projects</h1>
@@ -57,10 +70,32 @@
       </div>
     </section>
 
-    <section class="block projects_container">
+    <section class="block projects_container" id="projects">
       <header class="block__header">
-        <h2>Web design that feels right</h2>
+        <!-- <h2>Web design that feels right</h2> -->
+        <h2>Projects</h2>
       </header>
+
+      <article class="grid project">
+        <div data-aos="fade-up" class="project__content">
+          <h3 class="project__heading">Movie lists app</h3>
+          <p>
+            This is a movie lists app with a lists of movies we want to watch.
+            We have library of movies from around the world, we can find friends
+            and share our lists or cool movies with them, invite them for a
+            movie nights and more...
+          </p>
+          <a href="https://yadvirkaur.github.io/MovieList/" class="link-arrow"
+            >LEARN MORE --></a
+          >
+        </div>
+
+        <picture>
+          <!-- <source type="image/webp" srcset="images/movie.webp" /> -->
+
+          <img class="project__image" src="images/movie.jpg" alt="" />
+        </picture>
+      </article>
 
       <article class="grid project">
         <div data-aos="fade-up" class="project__content">
@@ -118,39 +153,22 @@
 
       <article class="grid project">
         <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Speech Recognition</h3>
+          <h3 class="project__heading">Portfolio</h3>
           <p>
-            Designed to help you write documents using your voice narration and
-            without typing. Built to make writing fast and easy.
+            This is a movie lists app with a lists of movies we want to watch.
+            We have library of movies from around the world, we can find friends
+            and share our lists or cool movies with them, invite them for a
+            movie nights and more...
           </p>
-          <a href="Projects/SpeechRecognition/speech.html" class="link-arrow"
+          <a href="https://yadvirkaur.github.io/" class="link-arrow"
             >LEARN MORE --></a
           >
         </div>
 
         <picture>
-          <!-- <source type="image/webp" srcset="images/watch.webp" /> -->
+          <!-- <source type="image/webp" srcset="images/movie.webp" /> -->
 
-          <img class="project__image" src="images/Speechh.png" alt="" />
-        </picture>
-      </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">HTML5 Canvas</h3>
-          <p>
-            Have fun with HTML5 Canvas! Express yourself with hand-picked colors
-            and different line widths.
-          </p>
-          <a href="Projects/Canvas/canvas.html" class="link-arrow"
-            >LEARN MORE --></a
-          >
-        </div>
-
-        <picture>
-          <!-- <source type="image/webp" srcset="images/watch.webp" /> -->
-
-          <img class="project__image" src="images/canvas.png" alt="" />
+          <img class="project__image" src="images/portfolio.png" alt="" />
         </picture>
       </article>
 
@@ -175,294 +193,13 @@
           <img class="project__image" src="images/watch.jpg" alt="" />
         </picture>
       </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Movie lists app</h3>
-          <p>
-            This is a movie lists app with a lists of movies we want to watch.
-            We have library of movies from around the world, we can find friends
-            and share our lists or cool movies with them, invite them for a
-            movie nights and more...
-          </p>
-          <a href="MovielistApp/play.html" class="link-arrow">LEARN MORE --></a>
-        </div>
-
-        <picture>
-          <source type="image/webp" srcset="images/movie.webp" />
-
-          <img class="project__image" src="images/movie.jpg" alt="" />
-        </picture>
-      </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Movielist App - Flex</h3>
-          <p>
-            This is a movie lists app designed using Flexbox layout for main
-            content. We have library of movies from around the world, we can
-            find friends and share our lists or cool movies with them, invite
-            them for a movie nights and more...
-          </p>
-          <a href="MovielistAppFlex/flex.html" class="link-arrow"
-            >LEARN MORE --></a
-          >
-        </div>
-
-        <picture>
-          <source type="image/webp" srcset="images/movie.webp" />
-
-          <img class="project__image" src="images/movie.jpg" alt="" />
-        </picture>
-      </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Movielist App - Grid</h3>
-          <p>
-            This is a movie lists app designed using Grid layout for main
-            content. We have library of movies from around the world, we can
-            find friends and share our lists or cool movies with them, invite
-            them for a movie nights and more...
-          </p>
-          <a href="MovielistAppGrid/grid.html" class="link-arrow"
-            >LEARN MORE --></a
-          >
-        </div>
-
-        <picture>
-          <source type="image/webp" srcset="images/movie.webp" />
-
-          <img class="project__image" src="images/movie.jpg" alt="" />
-        </picture>
-      </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Website for cloud hosting company</h3>
-          <p>
-            Beautiful, Responsive and fast website is built for an imaginary
-            cloud hosting company which looks great on all screen sizes
-          </p>
-          <a href="Moshify/index.html" class="link-arrow">LEARN MORE --></a>
-        </div>
-
-        <picture>
-          <source
-            type="image/webp"
-            srcset="images/Moshify_570.webp"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/webp"
-            srcset="images/Moshify_832.webp"
-            media="(min-width: 580px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/Moshify_570.jpg"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/Moshify_832.jpg"
-            media="(min-width: 580px)"
-          />
-          <img class="project__image" src="images/Moshify_832.jpg" alt="" />
-        </picture>
-      </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">
-            Transformations, Transitions and Animations
-          </h3>
-          <p>
-            A card is built with transformations, transitions and animations. A
-            gradient is created for the footer of the card. A subtle shadow is
-            added around the card so it's separated from the page.
-          </p>
-          <a href="Exercise/animate.html" class="link-arrow">LEARN MORE --></a>
-        </div>
-
-        <picture>
-          <source
-            type="image/webp"
-            srcset="images/animation_570.webp"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/webp"
-            srcset="images/animation_1022.webp"
-            media="(min-width: 580px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/animation_570.jpg"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/animation_1022.jpg"
-            media="(min-width: 580px)"
-          />
-          <img class="project__image" src="images/animation_1022.jpg" alt="" />
-        </picture>
-      </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Sign in form</h3>
-          <p>
-            Form is created which is horizontally and vertically in the center
-            of the screen. System font stack is used. The first input field is
-            automatically in focus when the page loads.
-          </p>
-          <a href="Exercise/forms.html" class="link-arrow">LEARN MORE --></a>
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="images/formelementimage_570.webp"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/webp"
-            srcset="images/formelementimage_1026.webp"
-            media="(min-width: 580px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/formelementimage_570.jpg"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/formelementimage_1026.jpg"
-            media="(min-width: 580px)"
-          />
-          <img
-            class="project__image"
-            src="images/formelementimage_1026.jpg"
-            alt=""
-          />
-        </picture>
-      </article>
-
-      <!-- <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Advanced HTML & CSS</h3>
-          <p class="project__description">
-            A banner is created to take up the entire height of the viewport.
-            The heading and the tagline are horizontally and vertically in the
-            center of the banner. Different versions of the image are created
-            for screens with the resolution of 320 - 1440.
-          </p>
-          <a href="Exercise/center.html" class="link-arrow">LEARN MORE -></a>
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="images/heroelement_570.webp"
-            media="(max-width: 580px)"
-          />
-          <source
-            type="image/webp"
-            srcset="images/heroelement_994.webp"
-            media="(min-width: 580px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/heroelement_570.jpg"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/heroelement_994.jpg"
-            media="(min-width: 580px)"
-          />
-          <img class="project__image" src="images/heroelement_994.jpg" alt="" />
-        </picture>
-      </article> -->
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Typography</h3>
-          <p class="project__description">
-            Blog Page for a recipe website using different Google fonts and
-            type-scale.com is used to determine the size of all headings.
-          </p>
-          <a href="Exercise/typo.html" class="link-arrow">LEARN MORE --></a>
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="images/blogpostimage_570.webp"
-            media="(max-width: 580px)"
-          />
-          <source
-            type="image/webp"
-            srcset="images/blogpostimage_1022.webp"
-            media="(min-width: 580px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/blogpostimage_570.jpg"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/blogpostimage_1022.jpg"
-            media="(min-width: 580px)"
-          />
-          <img
-            class="project__image"
-            src="images/blogpostimage_1022.jpg"
-            alt=""
-          />
-        </picture>
-      </article>
-
-      <article class="grid project">
-        <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Layouts</h3>
-          <p class="project__description">
-            Responsive navigation bar and photo gallery for various screen sizes
-            using the mobile-first approach.
-          </p>
-          <a href="Exercise/exerciseLayout.html" class="link-arrow"
-            >LEARN MORE --></a
-          >
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="images/imagegallery_570.webp"
-            media="(max-width: 580px)"
-          />
-          <source
-            type="image/webp"
-            srcset="images/imagegallery_1029.webp"
-            media="(min-width: 580px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/imagegallery_570.jpg"
-            media="(max-width: 570px)"
-          />
-          <source
-            type="image/jpg"
-            srcset="images/imagegallery_1029.jpg"
-            media="(min-width: 580px)"
-          />
-          <img
-            class="project__image"
-            src="images/imagegallery_1029.jpg"
-            alt=""
-          />
-        </picture>
-      </article>
     </section>
+
+    <section class="block" id="contact">
+      <h2>Contact Us</h2>
+      <p>You can reach us at...</p>
+    </section>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
