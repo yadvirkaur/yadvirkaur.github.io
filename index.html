@@ -35,11 +35,11 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <form name="contact" netlify netlify-honeypot="bot-field">
+    <!-- <form name="contact" netlify netlify-honeypot="bot-field">
       <input type="text" name="name" />
       <input type="email" name="email" />
       <textarea name="message"></textarea>
-    </form>
+    </form> -->
     <!-- This form is hidden from users and is not visible on your website, but it provides the necessary information(what fields are included in the form) to Netlify to handle form submissions. -->
   </head>
 
@@ -218,7 +218,8 @@
         <span> yadvirkaur15@gmail.com</span>
       </p>
 
-      <form name="contact" netlify>
+      <!-- <form name="contact" netlify> -->
+      <form name="contact" netlify netlify-honeypot="bot-field" method="POST">
         <div class="form-details">
           <input
             type="text"
