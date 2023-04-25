@@ -239,7 +239,6 @@ p {
 a {
   text-decoration: none;
   color: rgb(83, 170, 236);
-
   font-weight: bold;
 }
 @media screen and (min-width: 1024px) {
@@ -280,6 +279,7 @@ a {
 
 .contact-form {
   padding: 4rem;
+  padding-top: 10rem;
   max-width: 700px;
   margin: 0 auto 12rem;
 }
@@ -342,4 +342,28 @@ a {
 .contact-form button:hover {
   background-color: var(--white-color);
   color: var(--dark-purple-color);
+}
+
+/*------------Footer----------------------------------------*/
+.Footer {
+  padding-block: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.Footer > span {
+  width: 100%;
+  border: 1px solid rgba(145, 140, 164, 0.6);
+  margin-bottom: 4rem;
+}
+.Footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+.socialMedia {
+  display: flex;
+  gap: 3rem;
+}
+.socialMedia > a {
+  text-decoration: none;
+  color: var(--light-purple-color);
 }
