@@ -34,7 +34,15 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <form name="contact" netlify netlify-honeypot="bot-field">
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+    <!-- This form is hidden from users and is not visible on your website, but it provides the necessary information(what fields are included in the form) to Netlify to handle form submissions. -->
   </head>
+
   <body>
     <div class="menu_bar">
       <div class="menu_bar_icon" onclick="toggleMenu()">
@@ -210,13 +218,7 @@
         <span> yadvirkaur15@gmail.com</span>
       </p>
 
-      <form
-        name="contact"
-        method="POST"
-        action="https://resplendent-frangollo-93289a.netlify.app/#"
-        data-netlify="true"
-      >
-        <!-- action="#" -->
+      <form name="contact" netlify>
         <div class="form-details">
           <input
             type="text"
