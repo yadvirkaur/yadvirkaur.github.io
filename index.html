@@ -38,17 +38,25 @@
   <body>
     <div class="menu_bar">
       <div class="menu_bar_icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <img src="images/menuIcon.svg" alt="" />
       </div>
       <div class="menu_bar_list" id="menuList">
         <div class="list"><a href="#home">Home</a></div>
-        <div class="list">About</div>
-        <div class="list"><a href="#projects">Projects</a></div>
-        <div class="list"><a href="#contact">Contact</a></div>
+        <span></span>
+        <div class="list">
+          <a href="#projects">About</a>
+        </div>
+        <span></span>
+        <div class="list">
+          <a href="#projects">Projects</a>
+        </div>
+        <span></span>
+        <div class="list">
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </div>
+
     <section class="block container hero" id="home">
       <div class="grid">
         <header class="hero__content">
@@ -195,11 +203,47 @@
       </article>
     </section>
 
-    <section class="block" id="contact">
-      <h2>Contact Us</h2>
-      <p>You can reach us at...</p>
+    <section class="contact-form" id="contact">
+      <h2>Send me a message!</h2>
+      <p>
+        Get in touch or email directly on
+        <span> yadvirkaur15@gmail.com</span>
+      </p>
+
+      <form action="send_email.php" method="post">
+        <div class="form-details">
+          <input
+            type="text"
+            id="name"
+            class="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+
+          <input
+            type="email"
+            id="email"
+            class="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+
+        <textarea
+          id="message"
+          class="message"
+          name="message"
+          placeholder="Message"
+          required
+        ></textarea>
+
+        <button type="submit">Send</button>
+      </form>
     </section>
 
+    <script src="index.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
