@@ -21,6 +21,7 @@
         font-size: 1.5rem;
         line-height: 1.2;
         background-color: #330033;
+
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
         background-attachment: fixed;
         height: 300vh;
@@ -34,25 +35,23 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- <form name="contact" netlify netlify-honeypot="bot-field">
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form> -->
-    <!-- This form is hidden from users and is not visible on your website, but it provides the necessary information(what fields are included in the form) to Netlify to handle form submissions. -->
   </head>
 
   <body>
     <div class="menu_bar">
       <div class="menu_bar_icon" onclick="toggleMenu()">
-        <img src="images/menuIcon.svg" alt="" />
+        <span class="menu_bar_icon_line1"></span>
+        <span class="menu_bar_icon_line2"></span>
       </div>
       <div class="menu_bar_list" id="menuList">
         <div class="list"><a href="#home">Home</a></div>
         <span></span>
         <div class="list">
-          <a href="#projects">About</a>
+          <a href="#about">About</a>
+        </div>
+        <span></span>
+        <div class="list">
+          <a href="  ">Resume</a>
         </div>
         <span></span>
         <div class="list">
@@ -66,10 +65,12 @@
     </div>
 
     <section class="block container hero" id="home">
-      <div class="grid">
+      <div class="hero_grid">
         <header class="hero__content">
-          <h1 data-aos="fade-right" class="hero__text">Front-end Projects</h1>
-          <p class="hero__tagline">Designed by Yadvir Kaur.</p>
+          <h1 data-aos="fade-right" class="hero__text">
+            Hi, I'm <br />Yadvir Kaur
+          </h1>
+          <p class="hero__tagline">Frontend Web Developer</p>
         </header>
 
         <div data-aos="zoom-in">
@@ -86,6 +87,113 @@
       </div>
     </section>
 
+    <section class="block about" id="about">
+      <svg style="display: none">
+        <use xlink:href="images/icons.svg#icon-HTML"></use>
+        <use xlink:href="images/icons.svg#icon-CSS"></use>
+        <use xlink:href="images/icons.svg#icon-JS"></use>
+        <use xlink:href="images/icons.svg#icon-React"></use>
+        <use xlink:href="images/icons.svg#icon-Git"></use>
+        <use xlink:href="images/icons.svg#icon-Github"></use>
+      </svg>
+
+      <div class="heading">
+        <h2>About me!</h2>
+        <p>
+          Here you will find information about me, what I do, and my current
+          skills
+        </p>
+      </div>
+      <div class="about-details">
+        <div>
+          <h3 class="small-heading">Get to know me!</h3>
+          I'm a Frontend Web Developer building the Front-end of Websites and
+          Web Applications. Check out some of my work in the
+          <span class="about-highlights">
+            <a href="#projects">Projects section</a></span
+          >. I'm a highly organized person and have a keen eye for detail. I
+          create Websites and Web Applications that work well and look good with
+          minimalistic design and focus on user experience, while ensuring clean
+          and readable code.
+          <br />
+          <br />
+          Having five years of experience as an Assistant Professor and a
+          Masters in Computer Engineering , I can effectively convey ideas in
+          creative and understandable ways.
+          <br />
+          <br />I love taking care of indoor plants&#127807, practicing yoga , going for
+          morning walks, and binge-watching TV series;.
+          <br />
+          <br />
+          I'm open to job opportunities that allow me to contribute, learn, and
+          grow. If you have a good match for my skills and experience, please
+          <a href="#contact"> contact me</a> . I'm excited about new projects and
+          challenges.
+        </div>
+
+        <div>
+          <h3 class="small-heading">My Skills</h3>
+          My current set of skills, tools and technologies:
+          <div class="skills">
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-HTML"></use>
+              </svg>
+              <div class="skills-icons-name">HTML5</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-CSS"></use>
+              </svg>
+              <div class="skills-icons-name">CSS3</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-JS"></use>
+              </svg>
+              <div class="skills-icons-name">JavaScript</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-React"></use>
+              </svg>
+              <div class="skills-icons-name">React</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-Git"></use>
+              </svg>
+              <div class="skills-icons-name">Git</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-Github"></use>
+              </svg>
+              <div class="skills-icons-name">Github</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-VS"></use>
+              </svg>
+              <div class="skills-icons-name">VS Code</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-CMD"></use>
+              </svg>
+              <div class="skills-icons-name">Command Line</div>
+            </div>
+            <div>
+              <svg class="skills-icons" width="70" height="70">
+                <use xlink:href="images/icons.svg#icon-Responsive"></use>
+              </svg>
+              <div class="skills-icons-name">Responsive Design</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="block projects_container" id="projects">
       <header class="block__header">
         <!-- <h2>Web design that feels right</h2> -->
@@ -94,13 +202,10 @@
 
       <article class="grid project">
         <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Movie lists app</h3>
+          <h3 class="project__heading">Movielist</h3>
           <p>
-            This is a movie lists app with a lists of movies we want to watch.
-            We have library of movies from around the world, we can find friends
-            and share our lists or cool movies with them, invite them for a
-            movie nights and more...
-          </p>
+            This is a movie list app with a library of movies from around the world.
+            Users can save movies to their watchlist, watch trailers, and check availability on different platforms.  </p>
           <a href="https://yadvirkaur.github.io/MovieList/" class="link-arrow"
             >LEARN MORE --></a
           >
@@ -117,8 +222,8 @@
         <div data-aos="fade-up" class="project__content">
           <h3 class="project__heading">Quizzical</h3>
           <p>
-            Quizzical is a quiz app which presents questions of different
-            categories from Open Trivia question Database.
+            Quizzical is a quiz app with various categories and difficulty levels from Open Trivia Database, 
+            offering a personalized experience. It provides an entertaining way to spend time and helps to improve knowledge.
           </p>
           <a href="https://yadvirkaur.github.io/Quizzical/" class="link-arrow"
             >LEARN MORE --></a
@@ -136,9 +241,8 @@
         <div data-aos="fade-up" class="project__content">
           <h3 class="project__heading">Tenzies Game</h3>
           <p>
-            Tenzi dice game can be played by children as young as 6. You can
-            keep track of time and compete against the best time score.
-          </p>
+            Tenzi dice game is an excellent choice for children, with features such as 
+            time tracking and best-score tracking to enhance the gameplay. </p>
           <a href="https://yadvirkaur.github.io/tenziesgame/" class="link-arrow"
             >LEARN MORE --></a
           >
@@ -153,8 +257,10 @@
 
       <article class="grid project">
         <div data-aos="fade-up" class="project__content">
-          <h3 class="project__heading">Clock using Vanilla JS</h3>
-          <p>Easy to use Clock with Alarm, Timer And Stopwatch.</p>
+          <h3 class="project__heading">Clock</h3>
+          <p>
+            This user-friendly Clock app offers an alarm, timer, and stopwatch functionality.
+          </p>
           <a href="https://yadvirkaur.github.io/Clock/" class="link-arrow"
             >LEARN MORE --></a
           >
@@ -171,10 +277,8 @@
         <div data-aos="fade-up" class="project__content">
           <h3 class="project__heading">Portfolio</h3>
           <p>
-            This is a movie lists app with a lists of movies we want to watch.
-            We have library of movies from around the world, we can find friends
-            and share our lists or cool movies with them, invite them for a
-            movie nights and more...
+            This is my portfolio project, featuring an elegant design with user-friendly navigation
+             and showcasing information about me, my current skills, and some projects.
           </p>
           <a href="https://yadvirkaur.github.io/" class="link-arrow"
             >LEARN MORE --></a
@@ -184,7 +288,7 @@
         <picture>
           <!-- <source type="image/webp" srcset="images/movie.webp" /> -->
 
-          <img class="project__image" src="images/portfolio.png" alt="" />
+          <img style="border: 1px solid rgba(255, 255, 255,.2);" class="project__image" src="images/portfolio.png" alt="" />
         </picture>
       </article>
 
@@ -192,8 +296,7 @@
         <div data-aos="fade-up" class="project__content">
           <h3 class="project__heading">Apple Watch Landing Page</h3>
           <p>
-            Beautiful, Responsive and fast Landing Page built for Apple Watch
-            which looks great on all screen sizes
+            Built the Apple Watch landing page that looks great on all screen sizes.
           </p>
           <!-- href="Apple Watch Store Landing Page Design/play.html" -->
           <a
@@ -255,8 +358,8 @@
     <section class="block Footer">
       <span></span>
       <div class="Footer-info">
-        <div>© Yadvir Kaur 2023</div>
-        <div class="socialMedia">
+        <div class="Footer-detail">© 2023 | Designed & coded by Yadvir Kaur</div>
+        <div class="Footer-socialMedia">
           <a href="https://github.com/yadvirkaur">
             <img src="images/git.svg" alt="" />
           </a>
