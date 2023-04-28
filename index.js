@@ -1,7 +1,7 @@
 function toggleMenu() {
 var menuList = document.getElementById("menuList");
 var menuIcon = document.querySelector(".menu_bar_icon");
-var listItems = document.querySelectorAll(".menu_bar_list > .list");
+var listItems = document.querySelectorAll(".menu_bar_list > .list>a");
 
 menuList.classList.toggle("show");
 

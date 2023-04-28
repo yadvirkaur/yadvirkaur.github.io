@@ -1,21 +1,11 @@
 @import "./normalize.css";
 :root {
-  /* --color-headings: white; */
-  /* --color-body: #918ca4; */
   --light-purple-color: #d5c2d5;
   --mango-yellow-color: #ffbe55;
   --ice-blue-color: #53aaec;
-  --color-headings: #fff;
-  --color-body: #fff;
   --white-color: #fff;
   --dark-purple-color: #330033;
-
-  /* --fs-Tagline: 32px;
-  --fs-buybutton: 18px; */
-  --fs-navbar: 15px;
-  /* --fs-searchbar: 14px;
-  --padding-main-content: 32px;
-  --heading-line-height: 51px; */
+  --medium-purple-color: #550055;
 }
 
 *,
@@ -30,12 +20,13 @@ html {
 
 body {
   font-size: 1.5rem;
+  line-height: 1.2;
   font-weight: 300;
+  color: var(--white-color);
 }
 h1,
 h2,
 h3 {
-  color: var(--color-headings);
   margin-bottom: 1rem;
 }
 
@@ -87,6 +78,12 @@ p {
   }
 }
 
+a {
+  text-decoration: none;
+  color: var(--ice-blue-color);
+  font-weight: bold;
+}
+
 /*-------------Blocks-------------------------------------*/
 
 .block {
@@ -97,8 +94,24 @@ p {
 .block__header {
   text-align: center;
 }
+/*-------------Top-padding for all blocks-------------------------------------*/
+
+.about,
+.projects_block {
+  padding-top: 10rem;
+  padding-top: 10rem;
+}
+
+.contact-form {
+  /* projects above contact form already having a padding of 6, so here we give 4 only */
+  padding-top: 4rem;
+}
 
 /*-------------Menu_bar-------------------------------*/
+
+.menu_bar {
+  transition: all 01s;
+}
 
 .menu_bar_icon {
   cursor: pointer;
@@ -126,31 +139,36 @@ p {
 .menu_bar_list {
   background: rgba(51, 0, 51, 0.9);
   color: var(--light-purple-color);
+  padding: 5rem;
 }
 
 .menu_bar_list > .list {
   text-align: center;
-  padding: 2em;
+  padding: 1em;
 }
 .menu_bar_list > span {
-  border-top: 0.1px solid rgba(145, 140, 164, 0.3);
+  border-top: 0.1px solid rgba(145, 140, 164, 0.2);
 }
 .menu_bar_list {
-  display: none;
-}
-.menu_bar_list.show {
   background: var(--dark-purple-color);
-  bottom: 0;
-  display: block;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-top: 7rem;
-  padding-bottom: 5rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 99;
+
+  opacity: 0;
+  height: 0%;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+.menu_bar_list.show {
+  opacity: 1;
+  height: 100%;
+  transform: translateY(0);
+  transition: all 0.5s;
 }
 
 .list > a {
@@ -159,6 +177,8 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  /* This code was written to display the menu items as a top bar for larger screens 
+  and hide them on smaller screens. On smaller screens, the menu bar becomes visible when the menu icon is clicked. */
   /* .menu_bar_list {
     border: 1px solid white;
     display: flex;
@@ -203,6 +223,7 @@ p {
   gap: 5rem;
 }
 .hero_grid > :nth-child(2) {
+  /* to keep the hero image as center and display hero text for smaller and larger screens accordingly */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,11 +232,6 @@ p {
 .hero__image {
   width: 100%;
 }
-
-/* .profile_image {
-  width: 60%;
-  max-width: 200px;
-} */
 
 .hero__text {
   font-weight: 700;
@@ -243,10 +259,12 @@ p {
 
 /*-------------Icon-------------------------------------*/
 
-.icons {
+.chevron-icon {
   position: absolute;
   bottom: 2rem;
 }
+
+/*to animate the chevron icon in hero block  */
 
 @keyframes pop {
   0% {
@@ -269,13 +287,73 @@ p {
   animation-direction: reverse;
 }
 
-/*-------------Link-------------------------------------*/
+/*------------About----------------------------------------*/
 
-a {
-  text-decoration: none;
-  color: #53aaec;
-  font-weight: bold;
+.about {
+  line-height: 1.5;
 }
+
+.about > .heading {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.small-heading {
+  margin-bottom: 3rem;
+}
+
+/* code written with flex*/
+/* .skills {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.skills > * {
+  flex: 1 0 9rem;
+} */
+
+/* code written with grid*/
+.skills {
+  margin-top: 5rem;
+  display: grid;
+  gap: 7rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+}
+
+.skills > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-purple-color);
+  color: var(--dark-purple-color);
+  border-radius: 8px;
+}
+
+.skills-icons {
+  margin-top: 1rem;
+  padding: 0;
+  fill: var(--medium-purple-color);
+  width: 70px;
+  height: 70px;
+}
+
+.skills-icons-name {
+  padding: 1rem;
+}
+
+/*-------------Link arrow in projects block-------------------------------------*/
+
 @media screen and (min-width: 1024px) {
   .link-arrow {
     font-size: 1.5rem;
@@ -284,11 +362,10 @@ a {
 
 /*-------------Projects-------------------------------------*/
 
-.projects_container {
+.projects_block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10rem;
 }
 
 .grid {
@@ -318,12 +395,6 @@ a {
 
 /*-------------Contact Info-------------------------------------*/
 
-.contact-form {
-  padding: 4rem;
-  padding-top: 10rem;
-  max-width: 700px;
-  margin: 0 auto 12rem;
-}
 .contact-form h2 {
   text-align: center;
   margin-bottom: 30px;
@@ -385,6 +456,10 @@ a {
   color: var(--dark-purple-color);
 }
 
+.contact-form button:focus {
+  transform: scale(1.05);
+}
+
 /*------------Footer----------------------------------------*/
 .Footer {
   padding-block: 10rem;
@@ -408,69 +483,20 @@ a {
   display: flex;
   gap: 3rem;
 }
-.Footer-socialMedia > a {
-  text-decoration: none;
-  color: var(--light-purple-color);
+
+.Footer-icons {
+  fill: var(--light-purple-color);
+  width: 30px;
+  height: 30px;
 }
 
-/*------------About----------------------------------------*/
-
-.about {
-  padding-top: 10rem;
-  line-height: 1.5;
-}
-
-.about > .heading {
-  text-align: center;
-  margin-bottom: 4rem;
+.Project-tools {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
+  padding-bottom: 1rem;
 }
-
-.about-details {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-
-.small-heading {
-  margin-bottom: 3rem;
-}
-
-/* .skills {
-  margin-top: 5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-}
-.skills > * {
-  flex: 1 0 9rem;
-} */
-
-.skills {
-  margin-top: 5rem;
-  display: grid;
-  gap: 7rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
-}
-
-.skills > * {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: var(--light-purple-color);
-  color: var(--dark-purple-color);
-  border-radius: 8px;
-}
-
-.skills-icons {
-  margin-top: 1rem;
-  padding: 0;
-  fill: var(--dark-purple-color);
-}
-
-.skills-icons-name {
-  padding: 1rem;
+.Project-icons {
+  fill: var(--light-purple-color);
+  width: 20px;
+  height: 20px;
 }
